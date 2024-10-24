@@ -543,16 +543,27 @@ font-weight: 500;
 
 .footer-form {
     display: flex;
+    gap: 24px;
 }
 
 .footer-input {
-border: 1px solid #fff;
-border-radius: 4px;
-width: 264px;
-height: 40px;
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-background-color: transparent;
-margin-right: 24px;
+    border: 1px solid #fff;
+        border-radius: 4px;
+        width: 264px;
+        height: 40px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        padding-left: 16px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.04em;
+        color: #fff;
+        background: transparent;
+        outline: none;
+}
+
+.footer-input::placeholder {
+    color: #fff;
 }
 
 .footer-btn {
@@ -582,6 +593,7 @@ background-color: #404bbf;
 }
 
 .footer-icon-send {
+    margin-left: 16px;
     fill: #fff;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -705,7 +717,7 @@ background-color: #404bbf;
  .text-input:focus {
     border-color: #4d5ae5;
  }
- 
+
  .text-input:focus+ .icon-input,
  .text-input:hover+ .icon-input {
     fill: #4D5AE5;
