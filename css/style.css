@@ -618,9 +618,6 @@ background-color: #404bbf;
     top:0;
 background: rgba(46, 47, 66, 0.4);
 z-index: 999;
-visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -641,20 +638,24 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-padding: 24px 24px;
+padding: 72px 24px 24px 24px;
 }
 
 .button-close {
-    border-radius: 100%;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
         width: 24px;
         height: 24px;
     background-color: #e7e9fc; 
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 24px  24px 24px auto;
-        border: none;
-        cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    padding: 0;
 }
 
 .button-close:hover,
@@ -674,6 +675,9 @@ background-color: #404bbf;
         margin-bottom: 16px;
  }
 
+ .icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
  .wrapper {
     position: relative;
  }
@@ -683,6 +687,7 @@ background-color: #404bbf;
     left: 16px;
      top: 50%;
     transform: translateY(-50%); 
+    fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .modal-form {
@@ -696,6 +701,7 @@ background-color: #404bbf;
  .modal-feild { 
     width: 360px;
     min-height: 58px;
+    margin-bottom: 8px;
  }
 
  .text-input {
@@ -761,6 +767,7 @@ font-weight: 400;
     justify-content: center;
     align-items: center;
     margin-right: 8px;
+    margin-bottom: 24px;
     background-color: #fff;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
